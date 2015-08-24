@@ -72,7 +72,7 @@ with con:
 
 #5. Port over the station ID 
 station_ids = df['id'].tolist() 
-tation_ids = ['_' + str(x) + ' INT' for x in station_ids]  #clean up for SQL
+station_ids = ['_' + str(x) + ' INT' for x in station_ids]  #clean up for SQL
 
 #6. Bring it together
 with con:
@@ -157,4 +157,7 @@ print "With " + str(hour_change[379]) + " bicycles coming and going in the hour 
 
 plt.bar(hour_change.keys(), hour_change.values())
 plt.show()
+
+
+
    
